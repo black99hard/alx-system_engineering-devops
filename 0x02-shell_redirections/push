@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git add .
+
+git commit -m"done"
+
+git push origin main
+
+echo "done what you asked sir"
+
