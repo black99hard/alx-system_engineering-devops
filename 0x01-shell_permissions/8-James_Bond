@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ug-wxr, o+xwr hello
+chmod o+xwr hello
