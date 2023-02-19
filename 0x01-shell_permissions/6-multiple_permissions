@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod og+wrx file
+chmod u+x,g+x,o+x file
