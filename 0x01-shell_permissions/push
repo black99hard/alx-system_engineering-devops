@@ -2,22 +2,22 @@
 
 read -p " 1-PULL 2-PUSH 3-CHMOD " service
 
-if [ "$service" == 1 ]
+if [ $service == 1 ]
     then
         git add .
 
         git commit -m"done"
 
          git push
-fi
+
 elif [ $service == 2 ]
     then
         git pull 
-fi
+
 elif [ $service == 3 ]
     then
-      read -P "File Name "
-fi
+      read -p "File Name "
+
 else
 echo "please enter something in between 1-3"
 fi
