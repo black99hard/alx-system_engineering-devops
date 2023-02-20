@@ -19,7 +19,7 @@ elif [ $service == 3 ]
     then
         read -p "File Name " file
         touch $file
-        echo " #!/bin/bash " >> $file 
+        echo "#!/bin/bash" >> $file 
         chmod +x $file
         nano $file
         echo "you are good to go"
