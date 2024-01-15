@@ -3,10 +3,10 @@
 ## 504 Error while accessing a given URL
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/MitaliSengupta/holberton-system_engineering-devops/master/0x19-postmortem/image.gif" width=100% height=100% />
+<img src="https://github.com/black99hard/alx-system_engineering-devops/blob/main/0x19-postmortem/image.gif" width=100% height=100% />
 </p>
 
-### Incident report for [504 error / Site Outage](https://github.com/MitaliSengupta/holberton-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
+### Incident report for [504 error / Site Outage](https://github.com/black99hard/alx-system_engineering-devops/tree/main/0x19-postmortem)
 
 #### Summary
 
