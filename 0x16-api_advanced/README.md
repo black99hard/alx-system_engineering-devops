@@ -1,31 +1,48 @@
-# Advanced API
+# API advanced
 
-## Project takeaways
-- How to read API documentation to find the endpoints you’re looking for
-- How to use an API with pagination
-- How to parse JSON results from an API
-- How to make a recursive API call
-- How to sort a dictionary by value
+I continued to practice querying API's in this advanced project, this time
+working with the Reddit API.
 
-## Tasks
+## Tests :heavy_check_mark:
 
-- Write a function that queries the Reddit API and returns the number of subscribers (not active users, total subscribers) for a given subreddit. If an invalid subreddit is given, the function should return 0.
-  - Hint: No authentication is necessary for most features of the Reddit API. If you’re getting errors related to Too Many Requests, ensure you’re setting a custom User-Agent.
-  - Requirements:
-    - Prototype: def number_of_subscribers(subreddit)
-    - If not a valid subreddit, return 0.
-    - NOTE: Invalid subreddits may return a redirect to search results. Ensure that you are not following redirects.
+* [tests](./tests): Folder of test files for all tasks. Provided by Holberton
+School.
 
-- Write a function that queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
-  - Requirements:
-    - Prototype: def top_ten(subreddit)
-    - If not a valid subreddit, print None.
-    - NOTE: Invalid subreddits may return a redirect to search results. Ensure that you are not following redirects.
+## Function Prototypes :floppy_disk:
 
-- Write a recursive function that queries the Reddit API and returns a list containing the titles of all hot articles for a given subreddit. If no results are found for the given subreddit, the function should return None.
-  - Hint: The Reddit API uses pagination for separating pages of responses.
-  - Requirements:
-    - Prototype: def recurse(subreddit, hot_list=[])
-    - Note: You may change the prototype, but it must be able to be called with just a subreddit supplied. AKA you can add a counter, but it must work without supplying a starting value in the main.
-    - If not a valid subreddit, return None.
-    - NOTE: Invalid subreddits may return a redirect to search results. Ensure that you are not following redirects.
+Prototypes for functions written in this project:
+
+| File           | Prototype                               |
+| -------------- | --------------------------------------- |
+| `0-subs.py`    | `def number_of_subscribers(subreddit)`  |
+| `1-top_ten.py` | `def top_ten(subreddit)`                |
+| `2-recurse.py` | `def recurse(subreddit, hot_list=[])`   |
+| `100-count.py` | `def count_words(subreddit, word_list)` |
+
+## Tasks :page_with_curl:
+
+* **0. How many subs?**
+  * [0-subs.py](./0-subs.py): Python function that returns the total number of
+  subscribers for a given subreddit.
+  * Returns `0` if an invalid subreddit is given.
+
+* **1. Top Ten**
+  * [1-top_ten.py](./1-top_ten.py): Python function that prints the top ten
+  hottest posts for a given subreddit.
+  * Prints `None` if an invalid subreddit is given.
+
+* **2. Recurse it!**
+  * [2-recurse.py](./2-recurse.py): Python function that recursively returns a
+  list of titles for all hot articles on a given subreddit.
+  * Returns `None` if no results are found on the given subreddit.
+
+* **3. Count it!**
+  * [100-count.py](./100-count.py): Python function that recursively prints a
+  sorted count of given keywords parsed from titles of all hot articles on a given
+  subreddit.
+  * Keywords are case-insensitive and delimited by spaces.
+  * Results are printed in descending order by count.
+  * Words with identical counts are sorted alphabetically.
+  * Words with no matches are skipped.
+  * Results are based on the number of times a keyword appears - ie.,
+  `java java java` counts as three separate instances of `java`.
