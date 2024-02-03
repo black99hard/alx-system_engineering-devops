@@ -1,48 +1,40 @@
 # 0x0B. SSH
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Username</th>
-      <th>IP</th>
-      <th>State</th>
-      <th></th>
-    </tr>
-  </thead>
+## Resources
+Read or watch:
+* [What is a (physical) server - text](https://intranet.hbtn.io/rltoken/PXE-o9DWronMp4ETwADOpg)
+* [What is a (physical) server - video](https://intranet.hbtn.io/rltoken/IfLc3lxSs4w5xdsFlRDPWw)
+* [SSH essentials](https://intranet.hbtn.io/rltoken/qKJi0RXLqaCLkHLCLhiYNA)
+* [SSH Config File](https://intranet.hbtn.io/rltoken/DNiFD9w9Gx0mnQk5nXbtjg)
+* [Public Key Authentication for SSH](https://intranet.hbtn.io/rltoken/ZBYjVLcJ-ck-CFjndgSDBw)
+* [How Secure Shell Works](https://intranet.hbtn.io/rltoken/SW2m2e0KMA2K1dXk_0M0CA)
+* [SSH Crash Course](https://intranet.hbtn.io/rltoken/8N-RlUma9lwGfyZp1_C-Wg)
 
-  <tbody>
-      <tr>
-        <td>59637-web-01</td>
-        <td><code>ubuntu</code></td>
-        <td><code>52.23.212.37</code></td>
-        <td>running</td>
-        <td>
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
-              Actions
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right">
-                <li><a data-confirm="Are you sure to reboot 59637-web-01?" href="/servers/9390/soft_reboot">Soft reboot</a></li>
-                  <li><a data-confirm="Are you sure to hard reboot 59637-web-01?" href="/servers/9390/hard_reboot">Hard reboot</a></li>
+---
+## Learning Objectives
+What I learned from this project:
 
-              <li role="separator" class="divider"></li>
+* What is a server
+* Where servers usually live
+* What is SSH
+* How to create an SSH RSA key pair
+* How to connect to a remote host using an SSH RSA key pair
+* The advantage of using  #!/usr/bin/env bash instead of /bin/bash
 
-                <li>
-                  <a data-confirm="Are you sure you'd like a new server?
-- This server will be destroyed
-- Did you update your public SSH key in your user profile yet?
+---
+## Tasks
 
-This action can take time...
-Please, be patient..." href="/servers/9390/ask_new">
-                    Ask a new server
-</a>                </li>
-            </ul>
-          </div>
-        </td>
-      </tr>
-    
-  </tbody>
-</table>
+* **0. Use a private key**
+  * [0-use_a_private_key](./0-use_a_private_key): Bash script that uses `ssh` to connect to my
+  Holberton-provided server.
+
+* **1. Create an SSH key pair**
+  * [1-create_ssh_key_pair](./1-create_ssh_key_pair): Bash script that creates an RSA key pair.
+
+* **2. Client configuration file**
+  * [2-ssh_config](./2-ssh_config): SSH configuration file configured to use the private key
+  `~/.ssh/holberton` and to refuse authentication using a password.
+---
+
+## Author
+* **Estephania Calvo Carvajal** - [EstephaniaCalvoC](https://github.com/EstephaniaCalvoC)
