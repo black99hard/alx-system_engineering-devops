@@ -14,10 +14,6 @@ server {
     listen [::]:443 ssl;
     server_name 54.144.249.122;
 
-    ssl_certificate /etc/ssl/certs/certificate.crt;
-    ssl_certificate_key /etc/ssl/private/private.key;
-
-    # Other SSL configurations (e.g., ssl_protocols, ssl_ciphers, etc.)
 
     location / {
         root /var/www/html;
