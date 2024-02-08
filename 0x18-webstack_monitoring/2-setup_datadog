@@ -1,3 +1,9 @@
 1707302875595
 
 81b2c14515f6bedad3ee8c1d9caa1cc9
+
+# Curl command
+curl -X GET "https://api.datadoghq.com/api/v1/hosts" \
+-H "Accept: application/json" \
+-H "DD-API-KEY: 09e5389a19daa87f85c7ff9d130d088a" \
+-H "DD-APPLICATION-KEY: f716bf26a385998d09dc435cfd00201a5c5265e2"
