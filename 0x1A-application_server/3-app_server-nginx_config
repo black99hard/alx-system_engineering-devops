@@ -1,18 +1,10 @@
-server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    server_name 54.144.249.122;
-
-    add_header X-Served-By $hostname;
-
-    # Redirect HTTP to HTTPS
-    return 301 https://$host$request_uri;
-}
 
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
     server_name 54.144.249.122;
+
+    add_header X-Served-By $hostname;
 
 
     location / {
