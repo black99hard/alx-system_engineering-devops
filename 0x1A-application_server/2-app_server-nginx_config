@@ -1,7 +1,7 @@
 server {
     listen 80;
     listen [::]:80 default_server;
-    add_header X-Served-By $hostname;
+    add_header X-Served-By 2135-web-01;
     root   /etc/nginx/html;
     index  index.html index.htm;
     location /redirect_me {
@@ -25,3 +25,4 @@ server {
         try_files $uri $uri/ =404;
      }
 }
+
