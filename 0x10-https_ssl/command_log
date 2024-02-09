@@ -5,6 +5,6 @@ sudo apt-get install certbot
 sudo certbot certonly --standalone --preferred-challenges http --http-01-port 80 -d www.yakx.tech -d www.yakx.tech
 sudo ls /etc/letsencrypt/live/www.yakx.tech
 sudo mkdir -p /etc/haproxy/certs
-DOMAIN='example.com' sudo -E bash -c 'cat /etc/letsencrypt/live/$DOMAIN/fullchain.pem /etc/letsencrypt/live/$DOMAIN/privkey.pem > /etc/haproxy/certs/$DOMAIN.pem'
+DOMAIN='yakx.com' sudo -E bash -c 'cat /etc/letsencrypt/live/$DOMAIN/fullchain.pem /etc/letsencrypt/live/$DOMAIN/privkey.pem > /etc/haproxy/certs/$DOMAIN.pem'
 sudo chmod -R go-rwx /etc/haproxy/certs
 sudo nano /etc/haproxy/haproxy.cfg
