@@ -19,7 +19,7 @@ global
 
 defaults
         log     global
-        mode    http
+        mode    https
         option  httplog
         option  dontlognull
         timeout connect 5000
@@ -35,7 +35,7 @@ defaults
 
 frontend akoatem-frontend
         bind *:80
-        mode http
+        mode https
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
         default_backend akoatem-backend
