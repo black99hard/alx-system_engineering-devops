@@ -14,7 +14,7 @@ def number_of_subscribers(subreddit):
     - If not a valid subreddit, return 0.
     """
     req = requests.get(
-        "https://www.reddit.com/r/{subreddit}/about.json".format(subreddit),
+        "https://www.reddit.com/r/{}/about.json".format(subreddit),
         headers={"User-Agent": "Custom"},
     )
 
